@@ -9,7 +9,7 @@ A spiritual successor to [CompactConstraint](http://github.com/marcoarment/Compa
 
 # Syntax
 
-The syntax almost exactly matches CompactConstraint, except without those peskt `"`s. (Also the operators for priority and identifier are different)
+The syntax almost exactly matches CompactConstraint, except without those pesky `"`s. (Also the operators for priority and identifier are different)
 
 ```swift
 view.addConstraints([
