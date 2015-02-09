@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83585991A8949A8000818D8 /* Pinocchio.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B8B49EC71A88E44B00981161 /* Pinocchio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8B49ECD1A88E44B00981161 /* Pinocchio.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B49ECC1A88E44B00981161 /* Pinocchio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8B49ED31A88E44B00981161 /* Pinocchio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B49EC71A88E44B00981161 /* Pinocchio.framework */; };
 		B8B49EDA1A88E44B00981161 /* PinocchioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B49ED91A88E44B00981161 /* PinocchioTests.swift */; };
@@ -22,6 +23,20 @@
 			remoteInfo = Pinocchio;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B83585981A89499B000818D8 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B83585991A8949A8000818D8 /* Pinocchio.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B8B49EC71A88E44B00981161 /* Pinocchio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pinocchio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +243,7 @@
 				B8B49ECE1A88E44B00981161 /* Sources */,
 				B8B49ECF1A88E44B00981161 /* Frameworks */,
 				B8B49ED01A88E44B00981161 /* Resources */,
+				B83585981A89499B000818D8 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,15 +335,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B83585951A88FC8D000818D8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8B49EEC1A88F02E00981161 /* Test.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Test;
+		};
+		B83585961A88FC8D000818D8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8B49EF41A88F02E00981161 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				INFOPLIST_FILE = Pinocchio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		B83585971A88FC8D000818D8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8B49EF41A88F02E00981161 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PinocchioTests/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
 		B8B49EDB1A88E44B00981161 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8B49EE91A88F02E00981161 /* Debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -338,13 +392,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8B49EEB1A88F02E00981161 /* Release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -356,7 +409,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = Pinocchio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -369,7 +421,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = Pinocchio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -408,6 +459,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8B49EDB1A88E44B00981161 /* Debug */,
+				B83585951A88FC8D000818D8 /* Test */,
 				B8B49EDC1A88E44B00981161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -417,17 +469,21 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8B49EDE1A88E44B00981161 /* Debug */,
+				B83585961A88FC8D000818D8 /* Test */,
 				B8B49EDF1A88E44B00981161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8B49EE01A88E44B00981161 /* Build configuration list for PBXNativeTarget "PinocchioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8B49EE11A88E44B00981161 /* Debug */,
+				B83585971A88FC8D000818D8 /* Test */,
 				B8B49EE21A88E44B00981161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
