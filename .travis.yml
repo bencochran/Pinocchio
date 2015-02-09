@@ -1,0 +1,6 @@
+language: objective-c
+xcode_project: Pinocchio.xcodeproj
+xcode_scheme: PinocchioTests
+osx_image: xcode611
+notifications:
+  email: false
