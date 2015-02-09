@@ -1,6 +1,6 @@
 language: objective-c
 xcode_project: Pinocchio.xcodeproj
-xcode_scheme: PinocchioTests
+xcode_scheme: Pinocchio
 osx_image: xcode611
 before_install: true
 install: true
