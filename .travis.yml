@@ -2,5 +2,10 @@ language: objective-c
 xcode_project: Pinocchio.xcodeproj
 xcode_scheme: PinocchioTests
 osx_image: xcode611
+before_install: true
+install: true
+git:
+  submodules: false
+script: BUILD_TOOL=xctool script/cibuild
 notifications:
   email: false
