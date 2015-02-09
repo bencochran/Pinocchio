@@ -1,0 +1,14 @@
+# Xcode
+DerivedData/
+/build/
+xcuserdata/
+xcshareddata/
+.DS_Store
+Localizable.strings
+InfoPlist.strings
+Dependencies/gh-unit/
+.ruby-version
+.arcconfig
+.xctool-args
+compile_commands.json
+.xccheckout
